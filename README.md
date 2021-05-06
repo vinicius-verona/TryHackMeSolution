@@ -3,7 +3,7 @@
 ---
 
 ## **Disclaimer**
-> This repository contains solutions to [TryHackMe](tryhackme.com) rooms (**only free version**)
+> This repository contains solutions to [TryHackMe](tryhackme.com) rooms
 
 ---
 ## **Content**
