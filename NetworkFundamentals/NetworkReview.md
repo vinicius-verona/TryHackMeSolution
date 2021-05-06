@@ -6,7 +6,7 @@
 > OSI stands for "Open System Interconnection".
 - The OSI Model is a standardised model used to demonstrate the computer networking theory.
 - It consists of 7 layers, these are:
-<center>
+
 
 | Name | Layer |
 | :--: | :--: |
@@ -17,9 +17,7 @@
 |`Network` | (3rd layer) |
 |`Data Link` | (2nd layer) |
 |`Physical` | (1st layer) |
-| | |
 
-</center>
 <br>
 
 ### **Application**
@@ -65,7 +63,6 @@
 - This `Trailer` also adds some security level, once the data cannot be altered without breaking the `Trailer`.
 - The opposite process is called de-encapsulation and happens when the data is received from another computer.
 - It is worth mentioning that the encapsulated data is given a different name at different steps of the process. These are:
-<center>
 
 | Name | Layer |
 | :--: | :--: |
@@ -76,9 +73,7 @@
 |`Data (Packets)` | (3rd layer) |
 |`Data (Frames)` | (2nd layer) |
 |`Data Stream (Bits)` | (1st layer) |
-| | |
 
-</center>
 <br>
 
 ---
@@ -93,13 +88,12 @@
 |`Transport` | (3rd layer) |
 |`Internet` | (2nd layer) |
 |`Network Interface` | (1st layer) |
-| | |
 
 </center>
 <br>
 
 - Comparing both models we have the following match per layer:
-<center>
+
 <table>
     <thead>
       <tr>
@@ -129,7 +123,7 @@
       <tr><td>Physical</td></tr>
     </tbody>
 </table>
-</center>
+
 <br>
 
 - The processes of encapsulation and de-encapsulation work in exactly the same way with the TCP/IP model as they do with the OSI model. At each layer of the TCP/IP model a header is added during encapsulation, and removed during de-encapsulation.
