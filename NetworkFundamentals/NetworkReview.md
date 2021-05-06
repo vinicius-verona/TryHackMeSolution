@@ -36,9 +36,9 @@
 - Once the protocol has been chosen, the `transport` layer divides the transmission into bit-sized pieces in order to favor the transmission.
 - The most common protocol are:
   - **TCP** - Transmission Control Protocol is a connection-based transmission which favor the quality of its transfer over speed, i.e. it ensures that no data is lost during the transfer once both computers are in constant communication. It is worth reminding that it does not mean it will be a slow data transfer, it happens with an acceptable speed. 
-    - Its bit-sized pieces are called *segments*
+    - Its bit-sized pieces are called *`segments`*
   - **UDP** - User Datagram protocol is the opposite of **TCP**, it favors the speed over quality of transmission. Usually it is used for streaming, i.e. when the speed is more important that the accuracy of its data. This is the reason why videos stream might lose image quality.  
-    - Its bit-sized pieces are called *datagrams*
+    - Its bit-sized pieces are called *`datagrams`*
   - **SMB** - Server Message Block Protocol is a client-server communication protocol used for sharing access to files, ports, printers, etc. 
     - This protocol is known as a response-request protocol, i.e. it transmits multiple messages between the server and client in order to establish a connection. The client must connect to the server using `TCP/IP`, `NetBEUI` or `IPX/SPX`.
     - Once they have established a connection, clients can send a command (SMB) to the server allowing them to access shares, read and write files, and generally do all the sort of things that you want to do with a file system. However, in the case of SMB, these are done over the network.
@@ -80,7 +80,6 @@
 
 ## **TCP/IP Model**
 - Quite similar to the `OSI Model`, however, a bit older. It consists of 4 layers. These are:
-<center>
 
 | Name | Layer |
 | :--: | :--: |
@@ -89,7 +88,6 @@
 |`Internet` | (2nd layer) |
 |`Network Interface` | (1st layer) |
 
-</center>
 <br>
 
 - Comparing both models we have the following match per layer:
@@ -127,3 +125,23 @@
 <br>
 
 - The processes of encapsulation and de-encapsulation work in exactly the same way with the TCP/IP model as they do with the OSI model. At each layer of the TCP/IP model a header is added during encapsulation, and removed during de-encapsulation.
+- The TCP/IP takes its name from two protocols, the TCP and IP (Internet Protocol). The TCP controls the flow of data between the two endpoints, and the IP controls how the packet is addressed.
+- The proccess of connection using the TCP protocol is known as a *`three-way handshake`*. First of all, the source computer will send a request to the remote server, this request indicates that it wants to start a connection. This request contains something called a SYN (short for synchronise) bit, which essentially makes first contact in starting the connection process.The server will respond the request with a packet containing the SYN bit, as well as another "acknowledgement" bit, called ACK. Finally, the source computer will send a packet that contains the ACK bit by itself, confirming that the connection has been setup successfully. With the three-way handshake successfully completed, data can be reliably transmitted between the two computers. Any data that is lost or corrupted on transmission is re-sent, thus leading to a connection which appears to be lossless.
+
+---
+## **DNS**
+- DNS stands for Domain Name System, it works like a phonebook, it converts the URL typed into an IP address. The DNS is a TCP/IP protocol and the way it works is simple, when the user send a request to a specific URL, then computer will firstly look for the IP in the DNS server cache, if it hasn't been found, it will then send a request to a DNS server (already known by the computer) and wait for the response by the server. Once our computer knows the URL's IP address, the transmission proccess continues. 
+- Okay, but, how does it really work? 
+  - If the IP have not been found in the cache, the DNS server will send a query to one of the [**13 root name DNS servers**](https://en.wikipedia.org/wiki/Root_name_server). 
+  - The root server will then return the list of [**Top-level domain**](https://en.wikipedia.org/wiki/Top-level_domain), e.g. a list of DNS servers that handle ".com" domains. 
+  - Now the DNS server we sent our request will send a query to one of the servers in the list, which will return the [**authoritative name server**](https://www.cloudns.net/blog/authoritative-dns-server/) where the desired domain is stored. 
+  - Finally, a final query is sent to the auhoritative name server which will return the IP address we are looking for.
+- Want to read more about DNS?
+  - [**DNS Root Servers: What Are They and Are There Really Only 13?**](https://securitytrails.com/blog/dns-root-servers)
+  - [**How DNS Works: Domain Name System Terminology**](https://cloudacademy.com/blog/how-dns-works/)
+  - [**What is DNS?**](https://www.cloudflare.com/learning/dns/what-is-dns/)
+---
+
+## **Future Reading**
+-  **CISCO Self Study Guide by Steve McQuerry**
+-  **Cryptography and Network Security: Principles and Practiceby William Stallings**
