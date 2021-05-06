@@ -144,4 +144,4 @@
 
 ## **Future Reading**
 -  **CISCO Self Study Guide by Steve McQuerry**
--  **Cryptography and Network Security: Principles and Practiceby William Stallings**
+-  **Cryptography and Network Security: Principles and Practice by William Stallings**
