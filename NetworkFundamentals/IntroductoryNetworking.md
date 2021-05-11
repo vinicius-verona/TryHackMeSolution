@@ -163,3 +163,57 @@
 - Answer: `internet` 
 - Explanation: 
   - We know that by default, the `tracert` operates using the same ICMP protocol that *ping* utilises. The ICMP protocol used by *ping* runs on the Network Layer (OSI), therefore, it also runs on the Network Layer (OSI), which is equivalent to the Internet Layer (TCP/IP).
+---
+
+### **Networking Tools - WHOIS**
+> Perform a whois search on `facebook.com`
+- Answer: `No answer needed`
+
+> What is the registrant postal code for `facebook.com`?
+- Answer: `94025`
+- Explanation:
+  - After executing `whois facebook.com` we get a bunch of info regarding `facebook.com`. Right after `Domain Status` we get a list of `Registrant` data, such as the `Postal Code`.  
+
+> When was the facebook.com domain first registered?
+- Answer: `20/03/1997` 
+
+> Perform a whois search on `microsoft.com`
+- Answer: `No answer is needed`
+
+> Which city is the registrant based in?
+- Answer: `Redmond`
+
+> [**OSINT**] What is the name of the golf course that is near the registrant address for `microsoft.com`?
+- Answer: `Bellevue Golf Course`
+- Explanation:
+  - This one is a bit harder, once distance definition is quite personal and not all maps recognize the registrant address or are not fully updated. However, with a bit of research we get to `Bellevue Golf Course`.
+
+> What is the registered Tech Email for microsoft.com?
+- Answer: `msnhst@microsoft.com`
+---
+
+### **Networking Tools - Dig**
+> What is DNS short for?
+- Answer: `Domain Name System`
+- Explanation: Found in the text presented above the question. 
+
+> What is the first type of DNS server your computer would query when you search for a domain?
+- Answer: `Recursive`
+- Explanation: Found in the text presented above the question. 
+
+> What type of DNS server contains records specific to domain extensions (.com, .co.uk, etc)? Use the long version of the name.
+- Answer: `Top-Level Domain`
+- Explanation: Found in the text presented above the question.
+
+> Where is the very first place your computer would look to find the IP address of a domain?
+- Answer: `Local Cache`
+- Explanation: Found in the text presented above the question.
+
+> [**Research**] Google runs two public DNS servers. One of them can be queried with the IP 8.8.8.8, what is the IP address of the other one?
+- Answer: `8.8.4.4`
+- Explanation: Find the answer [here](https://developers.google.com/speed/public-dns/).
+
+> If a DNS query has a TTL of 24 hours, what number would the dig query show?
+- Answer: `86400`
+- Explanation: 
+  - TTL stands for Time To Live, it represents the amount of time in seconds the DNS caching is valid. That is, when the computer should request the IP for a certain URL again.
