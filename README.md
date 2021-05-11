@@ -15,5 +15,5 @@
 ### **Network Fundamentals**
 - [x] Introductory Networking - [Room](https://tryhackme.com/room/introtonetworking)
 - [x] Nmap - [Room](https://tryhackme.com/room/furthernmap)
-- [ ] Network Services - [Room](https://tryhackme.com/room/networkservices)
+- [x] Network Services - [Room](https://tryhackme.com/room/networkservices)
 - [ ] Network Services 2 - [Room](https://tryhackme.com/room/networkservices2)
