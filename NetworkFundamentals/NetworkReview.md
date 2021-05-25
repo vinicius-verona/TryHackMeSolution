@@ -39,10 +39,7 @@
     - Its bit-sized pieces are called *`segments`*
   - **UDP** - User Datagram protocol is the opposite of **TCP**, it favors the speed over quality of transmission. Usually it is used for streaming, i.e. when the speed is more important that the accuracy of its data. This is the reason why videos stream might lose image quality.  
     - Its bit-sized pieces are called *`datagrams`*
-  - **SMB** - Server Message Block Protocol is a client-server communication protocol used for sharing access to files, ports, printers, etc. 
-    - This protocol is known as a response-request protocol, i.e. it transmits multiple messages between the server and client in order to establish a connection. The client must connect to the server using `TCP/IP`, `NetBEUI` or `IPX/SPX`.
-    - Once they have established a connection, clients can send a command (SMB) to the server allowing them to access shares, read and write files, and generally do all the sort of things that you want to do with a file system. However, in the case of SMB, these are done over the network.
-
+   
 ### **Network**
 - This layer is the one that will locate the destination of our request. It takes the IP (Logical Addressing) address of a page (for example) and decide which route it should take to send the request.
 - The most common logical addressing is the IPV4 format.
@@ -75,6 +72,13 @@
 |`Data Stream (Bits)` | (1st layer) |
 
 <br>
+
+**SMB** 
+- Often used as an Application layer or a Presentation layer protocol, and it relies on lower-level protocols for transport
+- Server Message Block Protocol is a client-server communication protocol used for sharing access to files, ports, printers, etc. 
+- This protocol is known as a response-request protocol, i.e. it transmits multiple messages between the server and client in order to establish a connection. The client must connect to the server using `TCP/IP`, `NetBEUI` or `IPX/SPX`.
+- Once they have established a connection, clients can send a command (SMB) to the server allowing them to access shares, read and write files, and generally do all the sort of things that you want to do with a file system. However, in the case of SMB, these are done over the network.
+
 
 ---
 
